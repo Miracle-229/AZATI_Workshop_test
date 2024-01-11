@@ -128,13 +128,14 @@ const Home = (): JSX.Element => {
 			<div className={style.main}>
 				{/* для примера карточки сделан div с белым фоном  */}
 				<div className={style.products_row}>
-					{products.map((product: IProduct) => (
-						<ProductCard
-							key={product.id}
-							name={product.name}
-							image={product.image}
-						/>
-					))}
+					{products &&
+						products.map((product: IProduct) => (
+							<ProductCard
+								key={product.id}
+								name={product.name}
+								image={product.image}
+							/>
+						))}
 				</div>
 			</div>
 		</Layout>

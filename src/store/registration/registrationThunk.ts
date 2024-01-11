@@ -4,10 +4,10 @@ import { IUser } from '../../types/userType'
 
 export const registrationAction = createAsyncThunk(
 	'registration',
-	async ({ username, password }: IUser) => {
+	async ({ email, password }: IUser) => {
 		try {
-			const response = await api.post('/auth/registration', {
-				username,
+			const response = await api.post('/auth/signup', {
+				email,
 				password
 			})
 			console.log(response)

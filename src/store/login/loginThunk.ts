@@ -4,10 +4,10 @@ import { IUser } from '../../types/userType'
 
 export const loginAction = createAsyncThunk(
 	'registration',
-	async ({ username, password }: IUser) => {
+	async ({ email, password }: IUser) => {
 		try {
 			const response = await api.post('/auth/login', {
-				username,
+				email,
 				password
 			})
 			localStorage.setItem('accessToken', response.data.access_token)
