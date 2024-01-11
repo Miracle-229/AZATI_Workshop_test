@@ -3,7 +3,7 @@ import Home from './pages/Home'
 
 const router = createBrowserRouter([
 	{
-		path: '/AZATI_Workshop',
+		path: '/AZATI_Workshop_test',
 		element: <Home />
 	}
 ])
