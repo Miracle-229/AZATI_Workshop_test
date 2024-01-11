@@ -10,8 +10,8 @@ export const registrationAction = createAsyncThunk(
 				email,
 				password
 			})
-			console.log(response)
-			return response.data.data
+			localStorage.setItem('accessToken', response.data.token.access_token)
+			return response.data.token.access_token
 		} catch (error) {
 			console.error('Error fetching registration:', error)
 			throw error
